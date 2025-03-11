@@ -1,8 +1,8 @@
 name: lab01
 on: push
 jobs:
-	test:
-		runs-on: ubuntu-latest
-		steps:
-			- run: echo "Hello world"
-			- run: pip install nbconvert
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello world"
+      - run: pip install nbconvert
