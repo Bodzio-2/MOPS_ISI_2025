@@ -1,7 +1,9 @@
 name: lab01
 on: [push]
 jobs:
-  test:
+	test:
 		runs-on: ubuntu-latest
 		steps:
 			- run: echo "Hello world"
+			- run: pip install nbconvert
+			- run: python -m nbconvert
