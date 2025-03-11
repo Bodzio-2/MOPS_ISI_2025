@@ -4,7 +4,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - run: pip install nbconvert
       - run: sudo apt-get install pandoc inkscape texlive-xetex
       - run: python -m nbconvert --to pdf lab1/MPS_lab1.ipynb
+      - uses: actions/upload-artifact@v4
+        with:
+          path: "lab1/MPS_lab1.pdf"
