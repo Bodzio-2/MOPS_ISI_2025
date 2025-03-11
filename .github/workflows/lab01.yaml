@@ -4,5 +4,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello world"
+      - uses: actions/checkout@v2
       - run: pip install nbconvert
+			- run: sudo apt-get install pandoc
+			- run: python -m nbconvert --to pdf MPS_lab1.ipynb
