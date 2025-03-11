@@ -6,4 +6,3 @@ jobs:
 		steps:
 			- run: echo "Hello world"
 			- run: pip install nbconvert
-			- run: python -m nbconvert
