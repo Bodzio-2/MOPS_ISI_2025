@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: pip install nbconvert ipykernel open-atmos-jupyter-utils
-      - run: sudo apt-get install pandoc inkscape texlive-xetex
+      - run: sudo apt-get install --fix-missing pandoc inkscape texlive-xetex
       - run: python -m nbconvert --to pdf --execute lab3/MPS_lab3.ipynb
       - uses: actions/upload-artifact@v4
         with:
