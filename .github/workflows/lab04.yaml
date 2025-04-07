@@ -11,4 +11,4 @@ jobs:
       - run: python -m nbconvert --to pdf --execute lab4/MPS_lab4_Konrad_Bodzioch.ipynb
       - uses: actions/upload-artifact@v4
         with:
-          path: "lab4/MPS_lab4.pdf"
+          path: "lab4/MPS_lab4_Konrad_Bodzioch.pdf"
