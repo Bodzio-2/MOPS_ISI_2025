@@ -1,0 +1,14 @@
+name: lab05
+on: push
+jobs:
+  gen_pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install nbconvert ipykernel open-atmos-jupyter-utils
+      - run: sudo apt-get update
+      - run: sudo apt-get install pandoc inkscape texlive-xetex
+      - run: python -m nbconvert --to pdf --execute lab5/MPS_lab5_Konrad_Bodzioch.ipynb
+      - uses: actions/upload-artifact@v4
+        with:
+          path: "lab5/MPS_lab5_Konrad_Bodzioch.pdf"
